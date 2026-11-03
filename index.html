@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Martin Štětina – externí výrobní controlling pro malé a střední firmy</title>
+<meta name="description" content="Externí výrobní controlling pro malé a střední výrobní firmy. Diagnostika marží a nákladů, kalkulace výrobků a pravidelný měsíční reporting bez controllera na plný úvazek.">
+<meta name="author" content="Martin Štětina">
+<meta name="theme-color" content="#14243d">
+<!-- ZÁSTUPNÉ: po rozhodnutí o doméně (prodmetrics.cz / martinstetina.cz) upravit canonical a absolutní URL v og:url a og:image -->
+<link rel="canonical" href="https://www.prodmetrics.cz/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Martin Štětina – externí výrobní controlling">
+<meta property="og:description" content="Jasný přehled o marži, nákladech a efektivitě výroby – bez controllera na plný úvazek.">
+<meta property="og:url" content="https://www.prodmetrics.cz/">
+<meta property="og:image" content="https://www.prodmetrics.cz/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portrét Martina Štětiny">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314243d'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EMŠ%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#14243d; --ink-2:#2c3e5a; --text:#1f2937; --muted:#4b5563;
+  --bg:#ffffff; --bg-alt:#f5f3ef; --line:#e5e1da; --accent:#b4552d; --accent-dark:#8f3f1f;
+  --radius:14px; --max:1120px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;font-size:1.0625rem}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ink)}
+a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.25rem}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:.6rem 1rem;z-index:100}
+.skip:focus{left:1rem;top:1rem}
+h1,h2,h3{color:var(--ink);line-height:1.2;margin:0 0 .6em}
+h1{font-size:clamp(2.1rem,4.6vw,3.4rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.01em}
+h3{font-size:1.2rem}
+p{margin:0 0 1em}
+.eyebrow{display:inline-block;font-size:.85rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:.8rem}
+.lead{font-size:1.2rem;color:var(--ink-2);max-width:40ch}
+.btn{display:inline-block;background:var(--accent-dark);color:#fff;text-decoration:none;font-weight:600;padding:.9rem 1.4rem;border-radius:10px;transition:background .15s}
+.btn:hover{background:#73321a}
+.btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+
+/* hlavička */
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.brand{font-weight:700;color:var(--ink);text-decoration:none;font-size:1.1rem}
+.brand span{display:block;font-weight:400;font-size:.8rem;color:var(--muted)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.4rem}
+nav a{text-decoration:none;color:var(--ink-2);font-weight:500;font-size:.97rem}
+nav a:hover{color:var(--accent-dark)}
+.nav-cta{padding:.55rem 1rem;font-size:.95rem}
+@media (max-width:860px){nav{display:none}}
+
+/* hero */
+.hero-panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;box-shadow:0 20px 40px -24px rgba(20,36,61,.35)}
+.panel-title{font-weight:700;color:var(--ink);font-size:1.05rem;margin-bottom:1rem}
+.hero-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:.9rem}
+.hero-panel li{padding-left:1.1rem;border-left:3px solid var(--accent);color:var(--muted);line-height:1.45}
+.hero-panel strong{color:var(--ink)}
+
+.hero{padding:4.5rem 0 4rem;background:linear-gradient(180deg,#fff 0%,var(--bg-alt) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.hero-points{list-style:none;padding:0;margin:1.6rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;color:var(--muted);font-size:.97rem}
+.hero-points li::before{content:"✓";color:var(--accent-dark);font-weight:700;margin-right:.4rem}
+@media (max-width:760px){
+  .hero{padding:2.5rem 0 3rem}
+  .hero .wrap{grid-template-columns:1fr;gap:2rem}
+}
+
+section{padding:4.5rem 0}
+section.alt{background:var(--bg-alt)}
+.section-head{max-width:720px;margin-bottom:2.4rem}
+.section-head p{color:var(--muted)}
+
+/* o mně */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:start}
+.about img{width:100%;max-width:380px;aspect-ratio:4/5;object-fit:cover;object-position:50% 15%;box-shadow:0 20px 40px -20px rgba(20,36,61,.45);border-radius:var(--radius)}
+.facts{list-style:none;padding:0;margin:1.4rem 0 0;display:grid;gap:.7rem}
+.facts li{padding-left:1.6rem;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:.6em;width:.6rem;height:.6rem;border-radius:2px;background:var(--accent)}
+@media (max-width:760px){.about{grid-template-columns:1fr;gap:1.8rem}.about img{max-width:260px}}
+
+/* služby */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;display:flex;flex-direction:column}
+.card .num{font-size:.85rem;font-weight:700;color:var(--accent-dark);letter-spacing:.06em}
+.card h3{margin-top:.4rem}
+.card ul{padding-left:1.1rem;margin:.4rem 0 1rem;color:var(--text)}
+.card ul li{margin-bottom:.35rem}
+.card .out{margin-top:auto;padding-top:1rem;border-top:1px solid var(--line);font-size:.95rem;color:var(--muted)}
+.card .out strong{color:var(--ink)}
+@media (max-width:960px){.cards{grid-template-columns:1fr}}
+
+/* pro koho */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.checklist{list-style:none;padding:0;margin:0;display:grid;gap:.8rem}
+.checklist li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:.9rem 1rem .9rem 2.6rem;position:relative}
+.checklist li::before{content:"✓";position:absolute;left:1rem;top:.85rem;color:var(--accent-dark);font-weight:700}
+@media (max-width:760px){.two{grid-template-columns:1fr;gap:1.5rem}}
+
+/* proces */
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;counter-reset:s}
+.steps li{counter-increment:s;padding-top:3.2rem;position:relative}
+.steps li::before{content:counter(s);position:absolute;top:0;left:0;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700}
+.steps h3{font-size:1.1rem}
+.steps p{color:var(--muted);font-size:.98rem}
+@media (max-width:960px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{max-width:820px}
+.faq details{border-bottom:1px solid var(--line);padding:1rem 0}
+.faq summary{cursor:pointer;font-weight:600;color:var(--ink);font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--accent-dark)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:.8rem 0 0;color:var(--text)}
+
+/* kontakt */
+.contact{background:var(--ink);color:#e8edf5}
+.contact h2{color:#fff}
+.contact p{color:#d3dbe8;max-width:60ch}
+.contact .mail{display:inline-block;font-size:clamp(1.2rem,3vw,1.6rem);font-weight:700;color:#fff;margin:.6rem 0 1.6rem;word-break:break-all}
+.contact .btn{background:#fff;color:var(--ink)}
+.contact .btn:hover{background:#f1e3dc}
+.contact a:focus-visible{outline-color:#f3b89c}
+
+footer.site{background:#0e1a2d;color:#b9c3d3;padding:1.8rem 0;font-size:.92rem}
+footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem}
+footer.site a{color:#e8edf5}
+</style>
+</head>
+<body>
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#">Martin Štětina<span>externí výrobní controlling</span></a>
+    <nav aria-label="Hlavní navigace">
+      <ul>
+        <li><a href="#o-mne">O mně</a></li>
+        <li><a href="#sluzby">Služby</a></li>
+        <li><a href="#pro-koho">Pro koho</a></li>
+        <li><a href="#spoluprace">Spolupráce</a></li>
+        <li><a href="#faq">Otázky</a></li>
+      </ul>
+    </nav>
+    <!-- Kontaktní e-mail: martin@prodmetrics.cz – při přechodu na jinou doménu (např. martinstetina.cz) nahradit na všech místech stránky -->
+    <a class="btn nav-cta" href="mailto:martin@prodmetrics.cz?subject=Nez%C3%A1vazn%C3%A1%20sch%C5%AFzka">Kontakt</a>
+  </div>
+</header>
+
+<main id="obsah">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Externí výrobní controlling</span>
+      <h1 id="hero-title">Martin Štětina</h1>
+      <p class="lead">Jasný přehled o marži, nákladech a efektivitě vaší výroby – bez controllera na plný úvazek.</p>
+      <div class="hero-actions">
+        <a class="btn" href="mailto:martin@prodmetrics.cz?subject=Nez%C3%A1vazn%C3%A1%20sch%C5%AFzka">Domluvit nezávaznou schůzku</a>
+        <a class="btn btn-ghost" href="#sluzby">Co nabízím</a>
+      </div>
+      <ul class="hero-points">
+        <li>Pro malé a střední výrobní firmy</li>
+        <li>Praxe z výroby rychloobrátkového zboží (FMCG)</li>
+        <li>Online i osobně</li>
+      </ul>
+    </div>
+    <aside class="hero-panel" aria-label="Co ode mě dostanete">
+      <p class="panel-title">Co ode mě dostanete</p>
+      <ul>
+        <li><strong>Marže</strong> po výrobcích, zakázkách a zákaznících</li>
+        <li><strong>Náklady</strong> rozčleněné tak, aby bylo možné je optimalizovat</li>
+        <li><strong>Výsledovka</strong> a plán proti skutečnosti každý měsíc</li>
+        <li><strong>Doporučení</strong>, co s čísly konkrétně udělat</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section id="o-mne" aria-labelledby="o-mne-title">
+  <div class="wrap about">
+    <picture>
+      <source srcset="assets/martin-720.webp" type="image/webp">
+      <img src="assets/martin-720.jpg" width="720" height="960" alt="Martin Štětina v tmavomodrém saku a bílé košili" loading="lazy">
+    </picture>
+    <div>
+      <span class="eyebrow">O mně</span>
+      <h2 id="o-mne-title">Controller, který rozumí výrobě</h2>
+      <p>Jsem finanční controller se specializací na výrobní controlling – tedy tam, kde se marže rozhoduje u každé položky materiálu, směny a zakázky. Nejvíc zkušeností mám z výroby rychloobrátkového zboží (FMCG).</p>
+      <p>Externě nabízím pomoc menším výrobním firmám, které potřebují vědět, kde vydělávají a kde ztrácejí, ale controllera na plný úvazek nepotřebují nebo si ho zatím nemohou dovolit. Místo obecných rad dodám konkrétní výstupy: čísla, kalkulace a doporučení, se kterými se dá pracovat.</p>
+      <ul class="facts">
+        <li>Praxe v účetní firmě a ve výrobním controllingu velkých výrobních firem v Česku, hlavně v oblasti rychloobrátkového zboží</li>
+        <li>Propojuji účetní data s tím, co se reálně děje ve výrobě</li>
+        <li>Sídlím v Praze, spolupracuji na dálku i osobně</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby" class="alt" aria-labelledby="sluzby-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Služby</span>
+      <h2 id="sluzby-title">Tři způsoby, jak vám můžu pomoct</h2>
+      <p>Začít můžete jednorázovou diagnostikou, nebo rovnou tím, co vás pálí nejvíc.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <span class="num">01</span>
+        <h3>Diagnostika marží a nákladů</h3>
+        <p>Jednorázová revize účetních, výrobních a manažerských dat.</p>
+        <ul>
+          <li>kde vám uniká marže</li>
+          <li>náklady rozčleněné tak, aby bylo možné je optimalizovat</li>
+          <li>které náklady rostou rychleji než tržby</li>
+          <li>které ukazatele (KPI) má smysl pravidelně sledovat</li>
+        </ul>
+        <p class="out"><strong>Výstup:</strong> přehled zjištění s prioritami a návrh dalších kroků.</p>
+      </article>
+      <article class="card">
+        <span class="num">02</span>
+        <h3>Kalkulace výrobků a marží</h3>
+        <p>Skutečná marže po výrobcích, zakázkách a zákaznících.</p>
+        <ul>
+          <li>kalkulační model s rozčleněnými náklady, blíž realitě výroby</li>
+          <li>podklad pro stanovení cen</li>
+          <li>podklad pro rozhodování o sortimentu</li>
+        </ul>
+        <p class="out"><strong>Výstup:</strong> kalkulační model a přehled marží, který můžete dál používat.</p>
+      </article>
+      <article class="card">
+        <span class="num">03</span>
+        <h3>Pravidelný měsíční reporting</h3>
+        <p>Měsíční controlling místo interního controllera.</p>
+        <ul>
+          <li>výsledovka (P&amp;L) za měsíc</li>
+          <li>porovnání plánu se skutečností</li>
+          <li>komentář a konkrétní doporučení</li>
+        </ul>
+        <p class="out"><strong>Výstup:</strong> měsíční report s komentářem. Na přání i dashboard, například v Power BI.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="pro-koho" aria-labelledby="pro-koho-title">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">Pro koho to je</span>
+      <h2 id="pro-koho-title">Pro výrobní firmy, které chtějí řídit podle čísel</h2>
+      <p>Služby jsou určené malým a středním výrobním firmám, které potřebují výstupy controllingu, ale ne controllera na plný úvazek. Nejvíc zkušeností mám s výrobou rychloobrátkového zboží (FMCG), postupy controllingu ale fungují v jakékoli výrobě.</p>
+    </div>
+    <ul class="checklist">
+      <li>Víte, kolik jste prodali, ale ne, na čem skutečně vyděláváte.</li>
+      <li>Ceny stanovujete spíš odhadem než podle kalkulace.</li>
+      <li>Účetnictví máte, ale manažerský pohled na výsledky chybí.</li>
+      <li>Chcete pravidelně vidět plán proti skutečnosti a vědět, co s tím dělat.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="spoluprace" class="alt" aria-labelledby="spoluprace-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Jak spolupráce probíhá</span>
+      <h2 id="spoluprace-title">Čtyři kroky od první schůzky k výsledku</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Úvodní schůzka</h3>
+        <p>Nezávazně probereme, co řešíte, jaká data máte a co od spolupráce čekáte.</p>
+      </li>
+      <li>
+        <h3>Přístup k datům</h3>
+        <p>Po písemné dohodě o mlčenlivosti mi zpřístupníte potřebné podklady z účetnictví a výroby.</p>
+      </li>
+      <li>
+        <h3>Výstupy a komentář</h3>
+        <p>Data zpracuji a výsledky vám předám se srozumitelným komentářem.</p>
+      </li>
+      <li>
+        <h3>Doporučení</h3>
+        <p>Společně projdeme zjištění a dohodneme konkrétní kroky, co dál.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Časté otázky</span>
+      <h2 id="faq-title">Co vás nejspíš zajímá</h2>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>Co od vás budu potřebovat?</summary>
+        <p>Obvykle výstupy z účetnictví (například hlavní knihu nebo výsledovku), data o výrobě a prodejích a přehled cen surovin a materiálu. Přesný seznam vám řeknu po úvodní schůzce podle toho, co chcete řešit. Stačí data v podobě, v jaké je máte, s jejich přípravou pomůžu.</p>
+      </details>
+      <details>
+        <summary>Pracujete na dálku, nebo osobně?</summary>
+        <p>Obojí. Většinu práce s daty zvládnu na dálku, schůzky a prohlídku výroby rád udělám osobně. Sídlím v Praze.</p>
+      </details>
+      <details>
+        <summary>Jak je to s důvěrností dat?</summary>
+        <p>Mlčenlivost si písemně sjednáme ještě předtím, než mi zpřístupníte jakákoli data. Vaše čísla používám jen pro účely naší spolupráce.</p>
+      </details>
+      <details>
+        <summary>Kolik to stojí?</summary>
+        <p>Cena je individuální podle rozsahu. Probereme ji na první schůzce, která je nezávazná.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="contact" aria-labelledby="kontakt-title">
+  <div class="wrap">
+    <h2 id="kontakt-title">Pojďme se podívat na vaše čísla</h2>
+    <p>Napište mi pár vět o tom, co vyrábíte a co potřebujete vyřešit. Ozvu se a domluvíme nezávaznou schůzku.</p>
+    <a class="mail" href="mailto:martin@prodmetrics.cz">martin@prodmetrics.cz</a><br>
+    <a class="btn" href="mailto:martin@prodmetrics.cz?subject=Nez%C3%A1vazn%C3%A1%20sch%C5%AFzka">Domluvit nezávaznou schůzku</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Martin Štětina · Praha</span>
+    <!-- ZÁSTUPNÉ: doplnit řádek s IČO / údaji o podnikateli (např. „IČO: 00000000, zapsán v živnostenském rejstříku“), až bude známo -->
+    <a href="mailto:martin@prodmetrics.cz">martin@prodmetrics.cz</a>
+  </div>
+</footer>
+</body>
+</html>
